@@ -1,0 +1,102 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: negate admission enquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: admission
+  - action: utter_admission
+  - intent: deny
+  - action: utter_deny_admission
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ug
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: ugcourse
+  - action: utter_ugcourse
+  - intent: ugfee
+  - action: utter_ugfee
+
+- story: pg
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: pgcourse
+  - action: utter_pgcourse
+  - intent: pgfee
+  - action: utter_pgfee
+
+# - story: bot story
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+#   - intent: bot_challenge
+#   - action: utter_iambot
+  
+
+
+# - story: admission enquiry
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+#   - intent: admission
+#   - action: utter_admission
+#   - intent: inform_admission_no
+#   - action: action_print_name 
+
+# - story: admission enquiry2
+#   steps:
+#   - intent: admission
+#   - action: utter_admission
+#   - intent: inform_admission_no
+#   - action: action_print_name
+
+# - story: number_story
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: number
+#   - action: utter_number
+

@@ -1,0 +1,171 @@
+version: "3.1"
+actions:
+  - action_print_name
+entities:
+  - admission_no
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - admission
+  - ugfee
+  - pgfee
+  - ugcourse
+  - pgcourse
+  - preadmission
+  - inform_admission_no
+slots:
+  admission_no:
+     type : text
+     mappings:
+     - type: from_entity
+       entity: admission_no
+responses:
+  utter_greet:
+  - text: "नमस्ते"
+  - text: "खुशहाली से जियो"
+  - text: "नमस्ते पा"
+
+  utter_cheer_up:
+  - text: "एक चुटकुला सुनिए\nFriend 1 : मैं तुम्हारे घर बहुत दिन के बाद आया हूँ, क्या यह सिर्फ चाय है?\n
+           Friend 2 : आप और क्या चाहते हैं?\n 
+           Friend 1 : काटने के लिए कुछ?\n
+           Friend 2 : क्या आपके पास कुत्ता है?\n"
+  - text: "Hanso!"
+
+  utter_did_that_help:
+  - text: "अब, क्या मैंने तुम्हारे चेहरे पर मेकअप किया है?"
+
+  utter_happy:
+  - text: "बहुत खुश!"
+  - text: "हर्ष!"
+
+  utter_goodbye:
+  - text: "धन्यवाद"
+  - text: "आपको धन्यवाद और अलविदा!"
+  - text: "फिर मिलेंगे"
+
+  utter_iamabot:
+  - text: "मैं एक कीमियागर रोबोट हूँ"
+  - text: "मैं सिटी रोबोट 2.0 हूं।"
+
+  utter_admission:
+  - text: "वीआईटी चेन्नई आपका हार्दिक स्वागत करता है!
+           प्रवेश विवरण के बारे में जानने के लिए पहले अपना प्रवेश संख्या (प्रवेश संख्या) पंजीकृत करें।
+           जिनके पास नामांकन संख्या नहीं है, वे इस वेबसाइट लिंक पर क्लिक करके पंजीकरण करें. 
+           https://vitc.ac.in"
+  utter_deny_admission:
+  - text: "जिनके पास नामांकन संख्या नहीं है, वे इस वेबसाइट लिंक पर क्लिक करके पंजीकरण करें. 
+           https://vitc.ac.in"
+  utter_ugfee:
+  - text: "कंप्यूटर विज्ञान  200000\n
+           इलेक्ट्रॉनिक्स और संचार  170000\n
+          इलेक्ट्रिकल और इलेक्ट्रॉनिक्स  150000\n"
+  utter_pgfee: 
+  - text: "सॉफ्टवेयर इंजीनियरिंग  200000\nव्यावसायिक विश्लेषण 190000\n"
+
+  utter_ugcourse: 
+  - text: "बीटेक\nकंप्यूटर विज्\nइलेक्ट्रॉनिक्स और संचार\nइलेक्ट्रिकल और इलेक्ट्रॉनिक्स\n"
+  
+  utter_pgcourse:
+  - text: "एम.टेक\nसॉफ्टवेयर इंजीनियरिंग\nव्यावसायिक विश्लेषण\n"
+
+  # action_print_name:
+  # - text: "Your ad no : {admission_no}"
+
+  # utter_number:
+  # - text: "This is a number"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+# version: "3.1"
+# actions:
+#   - action_print_name
+# entities:
+#   - admission_no
+# intents:
+#   - greet
+#   - goodbye
+#   - affirm
+#   - deny
+#   - mood_great
+#   - mood_unhappy
+#   - bot_challenge
+#   - admission
+#   - ugfee
+#   - pgfee
+#   - ugcoursw
+#   - pgcourse
+#   - preadmission
+#   - inform_admission_no
+# slots:
+#   admission_no:
+#      type : text
+#      mappings:
+#      - type: from_entity
+#        entity: admission_no
+# responses:
+#   utter_greet:
+#   - text: "வணக்கம்"
+#   - text: "வாழ்க வளமுடன்"
+#   - text: "வணக்கம் பா"
+
+#   utter_cheer_up:
+#   - text: "கடி ஜோக் கேளுங்கள்\nFriend 1 : ரொம்ப நாள் கழிச்சி உங்க வீட்டுக்கு வந்திருக்கேனே, வெறும் டீ மட்டும் தானா மச்சி?\n
+#            Friend 2 : வேற என்ன வேணும்?\n 
+#            Friend 1 : கடிச்சிக்க ஏதாவது?\n
+#            Friend 2 : நாய் இருக்கு அவுத்து விடவா?\n"
+#   - text: ""
+
+#   utter_did_that_help:
+#   - text: "இப்பொழுது, உங்கள் முகதில் பூநகை வர செய்தேனா?"
+
+#   utter_happy:
+#   - text: "மிக மகிழ்ச்சி!"
+#   - text: "மகிழ்ச்சி!"
+
+#   utter_goodbye:
+#   - text: "நன்றி"
+#   - text: "நன்றி வணக்கம்!"
+#   - text: "மீண்டும் சந்திப்போம்"
+
+#   utter_iamabot:
+#   - text: "நான் ராசவாள் செய்யபட்ட ஒரு ரோபோ"
+#   - text: "நான் சிட்டி ரோபோ 2.0."
+
+#   utter_admission:
+#   - text: "வி.ஐ.டி சென்னை உங்களை அன்போடு வரவேறக்குகிறது! 
+#            சேர்க்கை விவரங்களைப் பற்றி அறிந்து கொள்ள முதலில் உங்கள் சேர்க்கை எண் ( அட்மிஷன் நம்பர் ) எங்கே பதிவு செய்யுங்கள். 
+#            சேரக்கை எண் இல்லாதவர்கள், இந்த வலைத்தள இணைப்பை அழுத்தி பதிவு செய்யவும். 
+#            https://vitc.ac.in"
+#   utter_deny_admission:
+#   - text: "சேரக்கை எண் இல்லாதவர்கள், இந்த வலைத்தள இணைப்பை அழுத்தி பதிவு செய்யவும். 
+#            https://vitc.ac.in"
+#   utter_ugfee:
+#   - text: "கணினி அறிவியல்  200000\n
+#            மின்னணு மற்றும் தொடர்பு  170000\n
+#            மின் மற்றும் மின்னணுவியல்  150000\n"
+#   utter_pgfee: 
+#   - text: "மென்பொருள் பொறியியல்  200000\nவணிக பகுப்பாய்வு  190000\n"
+
+#   utter_ugcourse: 
+#   - text: "பிடெக்\nகணினி அறிவியல்\nமின்னணு மற்றும் தொடர்பு\nமின் மற்றும் மின்னணுவியல்\n"
+  
+#   utter_pgcourse:
+#   - text: "எம்டெக்\nமென்பொருள் பொறியியல்\nவணிக பகுப்பாய்வு\n"
+
+#   # action_print_name:
+#   # - text: "Your ad no : {admission_no}"
+
+#   # utter_number:
+#   # - text: "This is a number"
+
+# session_config:
+#   session_expiration_time: 60
+#   carry_over_slots_to_new_session: true
